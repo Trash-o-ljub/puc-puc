@@ -7,6 +7,7 @@ public class Movement : MonoBehaviour
     private Rigidbody rb;
     public float speed, jumpForce;
     public float Hmove;
+    public float Vmove;
     public bool isGround;
     public Animator anim;
 
@@ -38,7 +39,7 @@ public class Movement : MonoBehaviour
         anim.SetFloat("Blend", Mathf.Abs(rb.velocity.x));
         anim.SetFloat("skok", rb.velocity.y);
         anim.SetBool("ground", isGround);
-        
+
         //sprint
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
@@ -48,16 +49,21 @@ public class Movement : MonoBehaviour
         {
             speed = 200;
         }
-        
-        //krauch
-        if (Input.GetKey(KeyCode.LeftControl))
+
+    }
+    //ljestve
+    void OnTriggerStay(Collider ljestve)
+    {
+        Vmove = Input.GetAxisRaw("Vertical");
+        if (Vmove > 0)
         {
-            transform.localScale = new Vector3(1, 1, 1);
+            rb.velocity = new Vector2(Vmove * speed * Time.deltaTime, rb.velocity.x);
+            rb.useGravity = false;
         }
-        if (Input.GetKeyUp(KeyCode.LeftControl))
-        {
-            transform.localScale = new Vector3(1, 2, 1);
-        }
+    }
+    void OnTriggerExit(Collider ljestve)
+    {
+        rb.useGravity = true;
     }
     //muvment
     void FixedUpdate()
