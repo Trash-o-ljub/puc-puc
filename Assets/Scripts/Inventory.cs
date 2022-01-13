@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
-    public GameObject inventar;   
+    public GameObject inventar;
+    public GameObject gun;
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Tab))
@@ -17,5 +18,13 @@ public class Inventory : MonoBehaviour
             inventar.SetActive(false);
         }
 
+    }
+    private void FixedUpdate()
+    {
+        if (PlayerPrefs.GetInt("gun") == 1)
+        {
+            gun.SetActive(true);
+        }
+        else { gun.SetActive(false); }
     }
 }

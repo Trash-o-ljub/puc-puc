@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1133162317177501465}
   - component: {fileID: 1133162317177501464}
   - component: {fileID: 1133162317177501447}
+  - component: {fileID: 71833364146206896}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -61,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7eeb03c4b48e5ae4eaf2b6726b42d0d8, type: 2}
+  - {fileID: 2100000, guid: c3bb6d36aea7fa34c8054de82ae34c5f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -90,7 +91,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1133162317177501446}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: e8c933ff6e174d74d8da588400e7f899, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
@@ -105,11 +106,24 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1133162317177501446}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 0.1
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 2
-  m_Constraints: 72
+  m_Constraints: 8
   m_CollisionDetection: 2
+--- !u!114 &71833364146206896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1133162317177501446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5186e4c4fe6068f4b932591a776f1126, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 2068518335761165612, guid: 3f1f3c5b4e4aeec4382bca4d15d95921, type: 3}
