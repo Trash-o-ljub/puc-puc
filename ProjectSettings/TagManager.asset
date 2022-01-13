@@ -14,10 +14,10 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Pozadina
   - Water
   - UI
-  - 
+  - Naprid
   - 
   - 
   - 
@@ -46,4 +46,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: background
+    uniqueID: 1934921737
+    locked: 0
+  - name: ostalo
+    uniqueID: 450306431
     locked: 0

@@ -8,13 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 3f43d8eeb1dc80c4d8a0595f3e4da770
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Level 1.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
-    path: Assets/Scenes/radiona.unity
-    guid: fb488d31ba7060347b427353f56ffcf6
   m_configObjects: {}
