@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class PlayerLoader : MonoBehaviour
 {
-    // Start is called before the first frame update
+    
     void Start()
     {
-        GameObject Player = Resources.Load("Player") as GameObject;
-        Instantiate(Player);
+        if (PlayerPrefs.GetInt("gun") == 0)
+        {
+            GameObject Player = Resources.Load("Player") as GameObject;
+            Instantiate(Player, new Vector3(-44, 27.5f, 0), Quaternion.identity);
+        }
     }
-
     
+
+
 }

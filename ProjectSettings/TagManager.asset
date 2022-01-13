@@ -9,6 +9,7 @@ TagManager:
   - Bullet
   - Door
   - GunChest
+  - Door1
   layers:
   - Default
   - TransparentFX

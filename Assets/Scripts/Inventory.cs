@@ -7,6 +7,7 @@ public class Inventory : MonoBehaviour
 {
     public GameObject inventar;
     public GameObject gun;
+    public GameObject exitScreen;
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Tab))
@@ -17,7 +18,10 @@ public class Inventory : MonoBehaviour
         {
             inventar.SetActive(false);
         }
-
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            exitScreen.SetActive(true);
+        }
     }
     private void FixedUpdate()
     {
@@ -26,5 +30,9 @@ public class Inventory : MonoBehaviour
             gun.SetActive(true);
         }
         else { gun.SetActive(false); }
+    }
+    public void ExitGame()
+    {
+        Application.Quit();
     }
 }
