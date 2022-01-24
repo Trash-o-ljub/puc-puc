@@ -51,20 +51,20 @@ public class Movement : MonoBehaviour
         }
 
     }
-    //ljestve
-    void OnTriggerStay(Collider ljestve)
-    {
-        Vmove = Input.GetAxisRaw("Vertical");
-        if (Vmove > 0)
-        {
-            rb.velocity = new Vector2(Vmove * speed * Time.deltaTime, rb.velocity.x);
-            rb.useGravity = false;
-        }
-    }
-    void OnTriggerExit(Collider ljestve)
-    {
-        rb.useGravity = true;
-    }
+    ////ljestve
+    //void OnTriggerStay(Collider ljestve)
+    //{
+    //    Vmove = Input.GetAxisRaw("Vertical");
+    //    if (Vmove > 0)
+    //    {
+    //        rb.velocity = new Vector2(Vmove * speed * Time.deltaTime, rb.velocity.x);
+    //        rb.useGravity = false;
+    //    }
+    //}
+    //void OnTriggerExit(Collider ljestve)
+    //{
+    //    rb.useGravity = true;
+    //}
     //muvment
     void FixedUpdate()
     {
