@@ -10,6 +10,7 @@ TagManager:
   - Door
   - GunChest
   - Door1
+  - Floor
   layers:
   - Default
   - TransparentFX
