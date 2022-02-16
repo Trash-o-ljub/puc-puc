@@ -14,7 +14,7 @@ PlayerSettings:
   accelerometerFrequency: 60
   companyName: pile
   productName: puc puc
-  defaultCursor: {fileID: 2800000, guid: becd7d4c2535e524e955abcae51584e3, type: 3}
+  defaultCursor: {fileID: 2800000, guid: bf851c6d5fa23a4468f02ee7321a1f90, type: 3}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
   m_ShowUnitySplashScreen: 1
@@ -152,7 +152,8 @@ PlayerSettings:
   resolutionScalingMode: 0
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
-  applicationIdentifier: {}
+  applicationIdentifier:
+    Standalone: com.pile.pucpuc
   buildNumber:
     Standalone: 0
     iPhone: 0

@@ -7,13 +7,22 @@ public class DoorInLevel : MonoBehaviour
     bool vrata;
     public GameObject Player;
     public Vector3 lokacia;
-    private void OnTriggerEnter(Collider Player)
+    private void OnTriggerEnter(Collider other)
     {
-        vrata = true;
+        if(other.gameObject.tag == "Player")
+        {
+            vrata = true;
+            Player = other.gameObject;
+        }
     }
-    private void OnTriggerExit(Collider Player)
+    private void OnTriggerExit(Collider other)
     {
-        vrata = false;
+        if (other.gameObject.tag == "Player")
+        {
+            vrata = false;
+            Player = other.gameObject;
+
+        }
     }
     private void Update()
     {
@@ -22,9 +31,5 @@ public class DoorInLevel : MonoBehaviour
             Player.transform.position = lokacia; 
         }
         
-    }
-    private void FixedUpdate()
-    {
-        Player = GameObject.FindGameObjectWithTag("Player");
     }
 }

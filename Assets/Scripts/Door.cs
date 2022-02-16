@@ -7,9 +7,9 @@ public class Door : MonoBehaviour
 {
     public string SName;
     
-    private void OnTriggerStay(Collider Player)
+    private void OnTriggerStay(Collider other)
     {
-        if ((Input.GetKey(KeyCode.DownArrow))||(Input.GetKey(KeyCode.S)))
+        if ((Input.GetKey(KeyCode.DownArrow))||(Input.GetKey(KeyCode.S)) && other.gameObject.tag == "Player")
         {
             SceneManager.LoadSceneAsync(SName);
             
