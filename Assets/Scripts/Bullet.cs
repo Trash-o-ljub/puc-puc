@@ -4,16 +4,17 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag != "Player")
         {
             Destroy(this.gameObject);
         }
-        if (other.gameObject.tag == "Enemy")
-        {
-            Destroy(other.gameObject);
-        }
+        //if (other.gameObject.tag == "Enemy")
+        //{
+            
+        //}
     }
 
 

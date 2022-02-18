@@ -7,6 +7,12 @@ public class Aim : MonoBehaviour
     public Rigidbody bulletPrefab;
     public Transform bulletSpawnPosition;
     Rigidbody cloneBullet;
+    AudioSource playerSounds;
+    public AudioClip gunSound;
+    void Start()
+    {
+        playerSounds = GetComponent<AudioSource>();
+    }
 
     void Update()
     {
@@ -15,6 +21,7 @@ public class Aim : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Fire();
+            playerSounds.PlayOneShot(gunSound);
         }
         void Fire()
         {

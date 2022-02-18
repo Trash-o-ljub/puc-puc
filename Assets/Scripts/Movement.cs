@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,10 +10,13 @@ public class Movement : MonoBehaviour
     public float Vmove;
     public bool isGround;
     public Animator anim;
+    AudioSource playerSounds;
+    public AudioClip landSound;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        playerSounds = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -51,34 +54,34 @@ public class Movement : MonoBehaviour
         }
 
     }
-    ////ljestve
-    //void OnTriggerStay(Collider ljestve)
-    //{
-    //    Vmove = Input.GetAxisRaw("Vertical");
-    //    if (Vmove > 0)
-    //    {
-    //        rb.velocity = new Vector2(Vmove * speed * Time.deltaTime, rb.velocity.x);
-    //        rb.useGravity = false;
-    //    }
-    //}
-    //void OnTriggerExit(Collider ljestve)
-    //{
-    //    rb.useGravity = true;
-    //}
-    //muvment
+    
     void FixedUpdate()
     {
         rb.velocity = new Vector2(Hmove * speed * Time.deltaTime, rb.velocity.y);
     }
-    
+
     //kad smije skocit(glupo)
-    void OnCollisionStay(Collision other)
+    void OnCollisionStay(Collision Floor)
     {
-        isGround = true;
+        if (Floor.gameObject.tag == "Floor")
+        {
+            isGround = true;
+        }
     }
-    
-    void OnCollisionExit(Collision other)
+
+    void OnCollisionEnter(Collision Floor)
     {
-        isGround = false;
+        if (Floor.gameObject.tag == "Floor")
+        {
+            playerSounds.PlayOneShot(landSound);
+        }
+    }
+
+    void OnCollisionExit(Collision Floor)
+    {
+        if (Floor.gameObject.tag == "Floor")
+        {
+            isGround = false;
+        }
     }
 }

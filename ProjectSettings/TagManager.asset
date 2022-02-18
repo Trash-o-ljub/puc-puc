@@ -11,6 +11,7 @@ TagManager:
   - GunChest
   - Door1
   - Floor
+  - Zid
   layers:
   - Default
   - TransparentFX
