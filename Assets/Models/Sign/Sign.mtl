@@ -1,0 +1,16 @@
+newmtl object_012EBFF4_material_7
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+d 1
+Tr 1
+illum 1
+Map_Kd kanban_advance2.png
+newmtl object_012EBFF4_material_18
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+d 1
+Tr 1
+illum 1
+Map_Kd kanban01.png

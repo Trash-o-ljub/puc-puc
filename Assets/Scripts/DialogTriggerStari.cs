@@ -5,7 +5,7 @@ using UnityEngine;
 public class DialogTriggerStari : MonoBehaviour
 {
     public Dialog dialog;
-    
+    public GameObject E;
     public void TriggerDialog()
     {
         FindObjectOfType<DialogManager>().StartDialog(dialog);
@@ -16,6 +16,18 @@ public class DialogTriggerStari : MonoBehaviour
         {
             FindObjectOfType<DialogManager>().StartDialog(dialog);
         }
+        if (other.gameObject.tag == "Player")
+        {
+            E.SetActive(true);
+        }
     }
-    
+    public void OnCollisionExit(Collision other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            E.SetActive(false);
+        }
+    }
+
+
 }

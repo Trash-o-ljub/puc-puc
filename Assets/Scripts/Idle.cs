@@ -20,9 +20,7 @@ public class Idle : MonoBehaviour
         if(timer <= 0)
         {
             transform.Rotate(0, 100*Time.deltaTime, 0);
-            
         }
-
     }
 
 }
