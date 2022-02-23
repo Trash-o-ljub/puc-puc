@@ -6,7 +6,7 @@ public class Zajebancija : MonoBehaviour
 {
     public AudioSource AS;
     public AudioClip HaHa;
-    private void OnCollision(Collision player)
+    private void OnCollisionEnter(Collision player)
     {
         if (player.gameObject.tag == "Player")
         {
