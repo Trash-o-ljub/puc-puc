@@ -14,6 +14,7 @@ public class DialogTrigger : MonoBehaviour
     {
         FindObjectOfType<DialogManager>().StartDialog(dialog);
         upitnik.SetActive(false);
+        //play pickup sound
     }
 
 }

@@ -159,20 +159,48 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 10603a31794d4d54fb6881a0b0b0b2eb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 10.3125
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 10603a31794d4d54fb6881a0b0b0b2eb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 848454051738262792, guid: 10603a31794d4d54fb6881a0b0b0b2eb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2f5fc8c47dc67814c8d8f2c5c5390125, type: 2}
     - target: {fileID: 919132149155446097, guid: 10603a31794d4d54fb6881a0b0b0b2eb, type: 3}
       propertyPath: m_Name
       value: floppy_disc
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10603a31794d4d54fb6881a0b0b0b2eb, type: 3}
+--- !u!1 &3148224987099748207 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 10603a31794d4d54fb6881a0b0b0b2eb, type: 3}
+  m_PrefabInstance: {fileID: 2842286090815793726}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2376613481138261461 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 10603a31794d4d54fb6881a0b0b0b2eb, type: 3}
   m_PrefabInstance: {fileID: 2842286090815793726}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &369544760951965620
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3148224987099748207}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5e6524134e789b94987705e73b2a74cd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

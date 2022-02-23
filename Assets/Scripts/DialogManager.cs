@@ -5,6 +5,10 @@ using UnityEngine.UI;
 
 public class DialogManager : MonoBehaviour
 {
+    public AudioSource AS;
+    public AudioClip nextMsgSound;
+    public AudioSource Slooow;
+
     public Text nameText;
     public Text dialogText;
     public Queue<string> sentences;
@@ -17,6 +21,7 @@ public class DialogManager : MonoBehaviour
     {
         Debug.Log("starting conv with " + dialog.name);
         dialogBox.SetActive(true);
+        Slooow.pitch=Time.timeScale = 0.2f;
         nameText.text = dialog.name;
         sentences.Clear();
         foreach(string sentence in dialog.sentences)
@@ -27,6 +32,7 @@ public class DialogManager : MonoBehaviour
     }
     public void DisplayNextSentence()
     {
+        AS.PlayOneShot(nextMsgSound);
         if (sentences.Count == 0)
         {
             EndDialog();
@@ -40,6 +46,7 @@ public class DialogManager : MonoBehaviour
     {
         Debug.Log("end of conv");
         dialogBox.SetActive(false);
+        Slooow.pitch = Time.timeScale = 1;
     }
     private void Update()
     {

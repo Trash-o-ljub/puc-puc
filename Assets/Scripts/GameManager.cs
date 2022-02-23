@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
 {
     void Start()
     {
-        if (PlayerPrefs.GetInt("gun") == 1)
+        if (PlayerPrefs.GetInt("gun") == 1 && PlayerPrefs.GetInt("Saved") == 1)
         {
             float LoadX = PlayerPrefs.GetFloat("SaveX");
             float LoadY = PlayerPrefs.GetFloat("SaveY");

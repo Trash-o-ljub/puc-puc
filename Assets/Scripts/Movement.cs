@@ -12,7 +12,7 @@ public class Movement : MonoBehaviour
     public Animator anim;
     AudioSource playerSounds;
     public AudioClip landSound;
-
+    public AudioClip jump;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -26,6 +26,7 @@ public class Movement : MonoBehaviour
 
         if (isGround && Input.GetKeyDown(KeyCode.Space))
         {
+            playerSounds.PlayOneShot(jump);
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
         if (Hmove < 0)
@@ -73,7 +74,7 @@ public class Movement : MonoBehaviour
     {
         if (Floor.gameObject.tag == "Floor")
         {
-            playerSounds.PlayOneShot(landSound);
+            playerSounds.PlayOneShot(landSound,0.5f);
         }
     }
 

@@ -13,6 +13,10 @@ public class MainMenu : MonoBehaviour
     }
     public void ExitGame()
     {
+        Invoke("MotajKablove", 1);
+    }
+    public void MotajKablove()
+    {
         Application.Quit();
     }
 }

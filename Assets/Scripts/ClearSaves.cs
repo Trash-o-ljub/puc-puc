@@ -4,9 +4,19 @@ using UnityEngine;
 
 public class ClearSaves : MonoBehaviour
 {
-    public void ClearSejvke()
+    public AudioSource AS;
+    public GameObject AreYouSeriousPanel;
+    public void paliSeriousPanel()
+    {
+        AreYouSeriousPanel.SetActive(true);
+    }
+    public void YesSerious()
     {
         PlayerPrefs.SetInt("saved", 0);
         PlayerPrefs.DeleteAll();
+        AS.pitch = Time.timeScale = 1;
+
+        AreYouSeriousPanel.SetActive(false);
     }
+
 }
