@@ -40,7 +40,7 @@ public class Health : MonoBehaviour
         reset = true;
         Time.timeScale = 1;
         //PlayerPrefs.SetInt("Health", maxHealth);
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadSceneAsync("MainMenu");
 
     }
 
@@ -48,7 +48,7 @@ public class Health : MonoBehaviour
     {
         reset = true;
         Time.timeScale = 1;
-        SceneManager.LoadScene("Level 1");
+        SceneManager.LoadSceneAsync("Level 1");
         //PlayerPrefs.SetInt("Health", 100);
         transform.position = new Vector3(PlayerPrefs.GetFloat("x"), PlayerPrefs.GetFloat("y"),0);
         Time.timeScale = 1;
