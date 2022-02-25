@@ -51,11 +51,12 @@ public class Health : MonoBehaviour
     }
     public void MainMenu()
     {
+        Debug.Log("stisnia si yes");
         reset = true;
         Time.timeScale = 1;
         //PlayerPrefs.SetInt("Health", maxHealth);
         SceneManager.LoadSceneAsync("MainMenu");
-
+        
     }
 
     public void Load()
