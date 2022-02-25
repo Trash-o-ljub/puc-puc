@@ -11,8 +11,15 @@ public class Health : MonoBehaviour
     public Slider slider;
     public GameObject OverScreen;
     public GameObject PlayerDead;
+    public AudioSource AS;
+    public AudioClip hurt;
+    public AudioClip healthPickup;
     bool reset = false;
-    
+    public GameObject healthObject;
+    private void Start()
+    {
+        healthObject = GameObject.FindGameObjectWithTag("Health");
+    }
     private void Update()
     {
         if (health <= 0 && reset == false)
@@ -28,11 +35,18 @@ public class Health : MonoBehaviour
         {
             health = health - 10;
             slider.value = health;
+            AS.PlayOneShot(hurt);
         }
-        if (collision.gameObject.tag == "Health")
+        
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Health")
         {
-            health = health + 10;
+            health = 100;
+            AS.PlayOneShot(healthPickup);
             slider.value = health;
+            healthObject.SetActive(false);
         }
     }
     public void MainMenu()

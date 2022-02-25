@@ -140,7 +140,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Exit game?
+  m_Text: 'Quit game and return to
+
+    Main Menu?'
 --- !u!1 &503401713418858975
 GameObject:
   m_ObjectHideFlags: 0
@@ -1392,6 +1394,10 @@ MonoBehaviour:
   slider: {fileID: 3569211531722672524}
   OverScreen: {fileID: 1916725361820938781}
   PlayerDead: {fileID: 7352369332544503088}
+  AS: {fileID: 6390773094713012655}
+  hurt: {fileID: 8300000, guid: b6222a3a190123b4899927db757a1244, type: 3}
+  healthPickup: {fileID: 8300000, guid: b2d99c709b6650f41b86bb2a49bb1893, type: 3}
+  healthObject: {fileID: 0}
 --- !u!82 &6390773094713012655
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3397,6 +3403,8 @@ GameObject:
   - component: {fileID: 4060468199432631094}
   - component: {fileID: 2487980372450915411}
   - component: {fileID: 8199543846792971939}
+  - component: {fileID: 1472452789982709873}
+  - component: {fileID: 6561584078925555351}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3483,6 +3491,83 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1186051603596030256}
   offset: {x: 0, y: 0, z: -10}
+--- !u!114 &1472452789982709873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7072104607035328653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeTrigger: {fileID: 637343786128288245}
+  volumeLayer:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  stopNaNPropagation: 1
+  finalBlitToCameraTarget: 0
+  antialiasingMode: 0
+  temporalAntialiasing:
+    jitterSpread: 0.75
+    sharpness: 0.25
+    stationaryBlending: 0.95
+    motionBlending: 0.85
+  subpixelMorphologicalAntialiasing:
+    quality: 2
+  fastApproximateAntialiasing:
+    fastMode: 0
+    keepAlpha: 0
+  fog:
+    enabled: 1
+    excludeSkybox: 1
+  debugLayer:
+    lightMeter:
+      width: 512
+      height: 256
+      showCurves: 1
+    histogram:
+      width: 512
+      height: 256
+      channel: 3
+    waveform:
+      exposure: 0.12
+      height: 256
+    vectorscope:
+      size: 256
+      exposure: 0.12
+    overlaySettings:
+      linearDepth: 0
+      motionColorIntensity: 4
+      motionGridSize: 64
+      colorBlindnessType: 0
+      colorBlindnessStrength: 1
+  m_Resources: {fileID: 11400000, guid: d82512f9c8e5d4a4d938b575d47f88d4, type: 2}
+  m_ShowToolkit: 0
+  m_ShowCustomSorter: 0
+  breakBeforeColorGrading: 0
+  m_BeforeTransparentBundles: []
+  m_BeforeStackBundles: []
+  m_AfterStackBundles: []
+--- !u!114 &6561584078925555351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7072104607035328653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sharedProfile: {fileID: 11400000, guid: de7e72a81d70eb3428608195e214254c, type: 2}
+  isGlobal: 1
+  blendDistance: 0
+  weight: 1
+  priority: 0
 --- !u!1 &7220827022447401434
 GameObject:
   m_ObjectHideFlags: 0
@@ -3765,6 +3850,7 @@ GameObject:
   - component: {fileID: 2929417364695432632}
   - component: {fileID: 3693345466266927297}
   - component: {fileID: 3934912518814830720}
+  - component: {fileID: 5361472112765838119}
   m_Layer: 5
   m_Name: Exit Screen
   m_TagString: Untagged
@@ -3832,6 +3918,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &5361472112765838119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7393518151752137807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a0a58d8845cc5048881336224d4b9a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7442209550476261801
 GameObject:
   m_ObjectHideFlags: 0
@@ -4931,24 +5029,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed1e606166347374a88965e157203e87, type: 3}
---- !u!224 &2993223374090059493 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 4412004896523017889, guid: ed1e606166347374a88965e157203e87, type: 3}
-  m_PrefabInstance: {fileID: 1490840868884668484}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &3264108268615136090 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4178486074436817694, guid: ed1e606166347374a88965e157203e87, type: 3}
-  m_PrefabInstance: {fileID: 1490840868884668484}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &7745543722979367232 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 9209075247933847812, guid: ed1e606166347374a88965e157203e87, type: 3}
   m_PrefabInstance: {fileID: 1490840868884668484}
   m_PrefabAsset: {fileID: 0}
+--- !u!224 &2993223374090059493 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4412004896523017889, guid: ed1e606166347374a88965e157203e87, type: 3}
+  m_PrefabInstance: {fileID: 1490840868884668484}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4631511599409162011 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6122336507977205599, guid: ed1e606166347374a88965e157203e87, type: 3}
+  m_PrefabInstance: {fileID: 1490840868884668484}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3264108268615136090 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4178486074436817694, guid: ed1e606166347374a88965e157203e87, type: 3}
   m_PrefabInstance: {fileID: 1490840868884668484}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &7691572957953848317

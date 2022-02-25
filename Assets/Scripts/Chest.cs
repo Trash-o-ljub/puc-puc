@@ -8,6 +8,8 @@ public class Chest : MonoBehaviour
     public Animation otvor;
     public Animator chest;
     public ParticleSystem ps;
+    public AudioSource AS;
+    public AudioClip getItem;
     private void Start()
     {
         otvor = gameObject.GetComponent<Animation>();
@@ -20,6 +22,7 @@ public class Chest : MonoBehaviour
             PlayerPrefs.SetInt("gun",1);
             chest.Play("chest",0);
             ps.Play();
+            AS.PlayOneShot(getItem);
             Destroy(E);
             GetComponent<BoxCollider>().enabled = false;
 

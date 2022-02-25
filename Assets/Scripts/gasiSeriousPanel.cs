@@ -14,4 +14,5 @@ public class gasiSeriousPanel : MonoBehaviour
             this.gameObject.SetActive(false);
         }
     }
+    public void GasiGaBokteUbio() { this.gameObject.SetActive(false); }
 }

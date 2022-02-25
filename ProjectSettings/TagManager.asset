@@ -12,6 +12,7 @@ TagManager:
   - Door1
   - Floor
   - Zid
+  - Health
   layers:
   - Default
   - TransparentFX
